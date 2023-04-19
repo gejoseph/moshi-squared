@@ -18,7 +18,7 @@ function PatientCard(props) {
                 </div>
             </div>
             <div className='patient-card-metric-info'>
-                <Title style={{color: 'gray', fontWeight: 'normal', }} className="patient-card-metric" level={5}>{props.metric}</Title>
+                <Title style={{color: 'gray', fontWeight: 'normal'}} className="patient-card-metric" level={5}>{props.metric}</Title>
                 <Tooltip placement="top" title={props.metricDescription}><QuestionCircleOutlined /></Tooltip>
             </div>
         </div>

@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import './App.css';
 import 'antd/dist/reset.css';
 import Navbar from "./atoms/navbar/Navbar";
-import { Layout, Card, Typography, Row, Col, Input, Select, Tabs, ConfigProvider } from 'antd';
+import { Layout, Card, Typography, Row, Col, Input, Select, Tabs, ConfigProvider, Table } from 'antd';
 import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import Graph from "./atoms/graph/Graph";
 import PatientCard from "./atoms/patientCard/PatientCard";
+import Columns from "./Columns";
+import Data from "./Data";
 const { Content } = Layout;
 const { Title } = Typography;
 const { Search } = Input;
@@ -21,32 +23,32 @@ const onChange = (key) => {
 
 const dailySteps = {
   chart: {
-    id: "Daily Steps"
+    id: "Step Count"
   },
   xaxis: {
-    categories: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
+    categories: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9"]
   }
 }
 
 const dailyStepsData = [
   {
     name: "Doe, John",
-    data: [30, 40, 45, 50, 49, 60, 70, 91, 80, 70, 60, 60]
+    data: [30, 40, 45, 50, 49, 60, 70, 91, 80]
   },
   {
     name: "Smith, Jane",
-    data: [45, 50, 49, 60, 70, 91, 45, 67, 80, 70, 60, 60]
+    data: [45, 50, 49, 60, 70, 91, 45, 67, 80]
   },
   {
     name: "Johnson, Alice",
-    data: [70, 91, 45, 67, 80, 70, 60, 60, 45, 50, 49, 60]
+    data: [70, 91, 45, 67, 80, 70, 60, 60, 45]
   }
 ]
 
 const metrics = [
   {
     key: '1',
-    label: `Daily Steps`,
+    label: `Step Count`,
     children: <div>
       <Graph options={dailySteps} series={dailyStepsData} type="line" />
       <div>
@@ -59,7 +61,7 @@ const metrics = [
             arrow={<ArrowDownOutlined style={{fontSize: 30, color: "red"}}/>}
             percentage="11"
             decimal="28"
-            metric="Daily Steps"
+            metric="Step Count"
             metricDescription="lorem ipsum dolor"
           ></PatientCard>
           <PatientCard 
@@ -67,7 +69,7 @@ const metrics = [
             arrow={<ArrowUpOutlined style={{fontSize: 30, color: "green"}}/>}
             percentage="14"
             decimal="67"
-            metric="Daily Steps"
+            metric="Step Count"
             metricDescription="lorem ipsum dolor"
           ></PatientCard>
           <PatientCard 
@@ -75,7 +77,7 @@ const metrics = [
             arrow={<ArrowUpOutlined style={{fontSize: 30, color: "green"}}/>}
             percentage="26"
             decimal="34"
-            metric="Daily Steps"
+            metric="Step Count"
             metricDescription="lorem ipsum dolor"
           ></PatientCard>
         </Row>
@@ -103,7 +105,9 @@ const views = [
   {
     key: '1',
     label: `Table View`,
-    children: `Content of Tab Pane 1`,
+    children: <div>
+      <Table columns={Columns} dataSource={Data} />
+    </div>,
   },
   {
     key: '2',

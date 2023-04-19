@@ -49,6 +49,10 @@ html {
   min-width: 180px;
 }
 
+.ant-select-selection-item {
+  text-align: left;
+}
+
 .subtitle {
   display: flex;
   float: left;
@@ -72,7 +76,11 @@ html {
 }
 
 :where(.css-dev-only-do-not-override-htwhyh).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  font-weight: 600;
+  font-weight: 800;
+}
+
+.ant-card-head-title {
+  text-align: left;
 }
 
 
