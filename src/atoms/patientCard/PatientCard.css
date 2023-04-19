@@ -1,0 +1,45 @@
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #3E8DF3;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+:where(.css-dev-only-do-not-override-htwhyh).ant-card .ant-card-head-title {
+    display: flex;
+}
+
+:where(.css-dev-only-do-not-override-htwhyh).ant-card .ant-card-head {
+    font-size: 18px;
+}
+
+:where(.css-dev-only-do-not-override-htwhyh).ant-card .ant-card-body {
+    padding: 10px 24px;
+}
+
+.patient-card {
+    margin: 0px 15px 0px 0px;
+}
+
+.patient-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+.patient-card-value {
+    display: flex;
+    align-items: baseline;
+}
+
+.patient-card-percentage {
+    display: flex;
+    align-items: baseline;
+}
+
+.patient-card-arrow {
+    padding-right: 10px;
+}
+

@@ -1,0 +1,21 @@
+
+.header {
+    height: 5%;
+    background-color: #434343;
+    overflow: hidden;
+    color: #f1f1f1;
+    padding: 1% 2% 0% 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#title, #username {
+    color: #f1f1f1;
+}
+
+#user {
+    min-width: 6.5%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}

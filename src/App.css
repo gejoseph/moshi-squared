@@ -1,5 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .App {
   text-align: center;
+  background-color: #f8f8f8;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  background-color: #f8f8f8;
+  font-family: 'Roboto', sans-serif;
+}
+
+#main {
+  /* padding: 25px; */
+}
+
+.card {
+  margin: 25px;
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-title {
+  text-align: left;
+}
+
+.card-filters {
+  display: flex;
+  float: right;
+}
+
+.card-filter {
+  margin: 0 10px;
+}
+
+#search {
+ width: 180px;
+}
+
+#filter {
+  width: 120px;
+}
+
+.filter {
+  min-width: 180px;
+}
+
+.subtitle {
+  display: flex;
+  float: left;
+}
+
+.patient-cards {
+  padding: 15px 0%;
+}
+
+:where(.css-dev-only-do-not-override-htwhyh).ant-select-multiple .ant-select-selection-placeholder {
+  text-align: left;
+}
+
+:where(.css-dev-only-do-not-override-htwhyh).ant-select-single.ant-select-show-arrow .ant-select-selection-item, :where(.css-dev-only-do-not-override-htwhyh).ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+  padding-inline-end: 0px;
+  text-align: left;
+}
+
+:where(.css-dev-only-do-not-override-htwhyh).ant-select .ant-select-selection-placeholder {
+  flex: auto;
+}
+
+:where(.css-dev-only-do-not-override-htwhyh).ant-tabs .ant-tabs-ink-bar {
+  background: purple;
+}
+
+:where(.css-dev-only-do-not-override-htwhyh).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: purple;
+  font-weight: 500;
+}
+
+:where(.css-dev-only-do-not-override-htwhyh).ant-tabs .ant-tabs-tab:hover {
+  color: purple;
 }
 
 .App-logo {
