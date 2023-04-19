@@ -43,3 +43,18 @@
     padding-right: 10px;
 }
 
+.patient-card-metric-info {
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+
+.patient-card-metric {
+    padding-right: 5px;
+    
+}
+
+h5:where(.css-dev-only-do-not-override-10kurpc).ant-typography {
+    margin-bottom: 0;
+}
+

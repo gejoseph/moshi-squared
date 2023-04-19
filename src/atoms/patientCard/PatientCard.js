@@ -1,6 +1,6 @@
 import React from 'react';
 import './PatientCard.css';
-import { Typography, Card } from 'antd';
+import { Typography, Card, Tooltip } from 'antd';
 import { UserOutlined, QuestionCircleOutlined } from '@ant-design/icons';
 import 'antd/dist/reset.css';
 const { Title } = Typography;
@@ -17,7 +17,10 @@ function PatientCard(props) {
                     <Title level={4}>.{props.decimal}%</Title>
                 </div>
             </div>
-            <Title style={{color: 'gray', fontWeight: 'normal', }} className="patient-card-metric" level={5}>{props.metric}<span>     <QuestionCircleOutlined /></span></Title>
+            <div className='patient-card-metric-info'>
+                <Title style={{color: 'gray', fontWeight: 'normal', }} className="patient-card-metric" level={5}>{props.metric}</Title>
+                <Tooltip placement="top" title={props.metricDescription}><QuestionCircleOutlined /></Tooltip>
+            </div>
         </div>
       </Card>
   );

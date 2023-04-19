@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import './App.css';
 import 'antd/dist/reset.css';
 import Navbar from "./atoms/navbar/Navbar";
-import { Layout, Card, Typography, Row, Col, Input, Select, Tabs } from 'antd';
+import { Layout, Card, Typography, Row, Col, Input, Select, Tabs, ConfigProvider } from 'antd';
 import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import Graph from "./atoms/graph/Graph";
 import PatientCard from "./atoms/patientCard/PatientCard";
@@ -60,6 +60,7 @@ const metrics = [
             percentage="11"
             decimal="28"
             metric="Daily Steps"
+            metricDescription="lorem ipsum dolor"
           ></PatientCard>
           <PatientCard 
             name="Smith, Jane" 
@@ -67,6 +68,7 @@ const metrics = [
             percentage="14"
             decimal="67"
             metric="Daily Steps"
+            metricDescription="lorem ipsum dolor"
           ></PatientCard>
           <PatientCard 
             name="Johnson, Alice" 
@@ -74,6 +76,7 @@ const metrics = [
             percentage="26"
             decimal="34"
             metric="Daily Steps"
+            metricDescription="lorem ipsum dolor"
           ></PatientCard>
         </Row>
       </div>
@@ -114,7 +117,14 @@ class App extends Component {
 
   render() {
     return (
-      <Layout className="App">
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: '#904199',
+          },
+        }}
+      >
+        <Layout className="App">
         <Navbar/>
         <Content id="main">
           <Card size="large" className="card">
@@ -162,6 +172,8 @@ class App extends Component {
           </Card>
         </Content>
       </Layout>
+      </ConfigProvider>
+      
     );
   }
 }

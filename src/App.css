@@ -71,18 +71,10 @@ html {
   flex: auto;
 }
 
-:where(.css-dev-only-do-not-override-htwhyh).ant-tabs .ant-tabs-ink-bar {
-  background: purple;
-}
-
 :where(.css-dev-only-do-not-override-htwhyh).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: purple;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-:where(.css-dev-only-do-not-override-htwhyh).ant-tabs .ant-tabs-tab:hover {
-  color: purple;
-}
 
 .App-logo {
   height: 40vmin;
