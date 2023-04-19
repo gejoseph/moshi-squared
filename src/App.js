@@ -26,22 +26,22 @@ const dailySteps = {
     id: "Step Count"
   },
   xaxis: {
-    categories: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9"]
+    categories: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "week 10", "Week 11", "Week 12"]
   }
 }
 
 const dailyStepsData = [
   {
-    name: "Doe, John",
-    data: [30, 40, 45, 50, 49, 60, 70, 91, 80]
+    name: "Smith, Alice",
+    data: [1342, 3000]
   },
   {
-    name: "Smith, Jane",
-    data: [45, 50, 49, 60, 70, 91, 45, 67, 80]
+    name: "White, Ethan",
+    data: [1500, 2000, 2121, 2500]
   },
   {
-    name: "Johnson, Alice",
-    data: [70, 91, 45, 67, 80, 70, 60, 60, 45]
+    name: "Martin, Mia",
+    data: [500, 600, 700, 800, 2789, 900]
   }
 ]
 
