@@ -8,7 +8,7 @@ const { Title } = Typography;
 
 function PatientCard(props) {
   return (
-      <Card title={props.name} extra={<span class="dot"></span>} style={{width: 350}} className="patient-card">
+      <Card title={props.name} hoverable={true} extra={<span class="dot"></span>} style={{width: 350}} className="patient-card">
         <div className='patient-card-content'>
             <div className='patient-card-value'>
                 <span className='patient-card-arrow'>{props.arrow}</span>

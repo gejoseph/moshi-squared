@@ -89,7 +89,39 @@ const metrics = [
     key: '2',
     label: `Heart Rate`,
     children: <div>
-
+      <Graph options={dailySteps} series={dailyStepsData} type="line" />
+      <div>
+        <Row>
+          <Title className="subtitle" level={4}>Watch List</Title>
+        </Row>
+        <Row className="patient-cards">
+          <PatientCard 
+            name="Doe, John" 
+            arrow={<ArrowDownOutlined style={{fontSize: 30, color: "red"}}/>}
+            percentage="11"
+            decimal="28"
+            metric="Step Count"
+            metricDescription="lorem ipsum dolor"
+          ></PatientCard>
+          <PatientCard 
+            name="Smith, Jane" 
+            arrow={<ArrowUpOutlined style={{fontSize: 30, color: "green"}}/>}
+            percentage="14"
+            decimal="67"
+            metric="Step Count"
+            metricDescription="lorem ipsum dolor"
+          ></PatientCard>
+          <PatientCard 
+            name="Johnson, Alice" 
+            arrow={<ArrowUpOutlined style={{fontSize: 30, color: "green"}}/>}
+            percentage="26"
+            decimal="34"
+            metric="Step Count"
+            metricDescription="lorem ipsum dolor"
+          ></PatientCard>
+        </Row>
+      </div>
+      
     </div>,
   },
   {
