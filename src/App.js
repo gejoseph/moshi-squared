@@ -21,7 +21,7 @@ const onChange = (key) => {
   console.log(key);
 };
 
-const dailySteps = {
+const stepCount = {
   chart: {
     id: "Step Count"
   },
@@ -30,7 +30,55 @@ const dailySteps = {
   }
 }
 
-const dailyStepsData = [
+const stepCountData = [
+  {
+    name: "Smith, Alice",
+    data: [1342, 3000]
+  },
+  {
+    name: "White, Ethan",
+    data: [1500, 2000, 2121, 2500]
+  },
+  {
+    name: "Martin, Mia",
+    data: [500, 600, 700, 800, 2789, 900]
+  }
+]
+
+const heartRate = {
+  chart: {
+    id: "Heart Rate"
+  },
+  xaxis: {
+    categories: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "week 10", "Week 11", "Week 12"]
+  }
+}
+
+const heartRateData = [
+  {
+    name: "Smith, Alice",
+    data: [1342, 3000]
+  },
+  {
+    name: "White, Ethan",
+    data: [1500, 2000, 2121, 2500]
+  },
+  {
+    name: "Martin, Mia",
+    data: [500, 600, 700, 800, 2789, 900]
+  }
+]
+
+const hrsOfSleep = {
+  chart: {
+    id: "Hrs of Sleep"
+  },
+  xaxis: {
+    categories: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "week 10", "Week 11", "Week 12"]
+  }
+}
+
+const hrsOfSleepData = [
   {
     name: "Smith, Alice",
     data: [1342, 3000]
@@ -50,7 +98,7 @@ const metrics = [
     key: '1',
     label: `Step Count`,
     children: <div>
-      <Graph options={dailySteps} series={dailyStepsData} type="line" />
+      <Graph options={stepCount} series={stepCountData} type="line" />
       <div>
         <Row>
           <Title className="subtitle" level={4}>Watch List</Title>
@@ -89,7 +137,7 @@ const metrics = [
     key: '2',
     label: `Heart Rate`,
     children: <div>
-      <Graph options={dailySteps} series={dailyStepsData} type="line" />
+      <Graph options={heartRate} series={heartRateData} type="line" />
       <div>
         <Row>
           <Title className="subtitle" level={4}>Watch List</Title>
@@ -128,7 +176,38 @@ const metrics = [
     key: '3',
     label: `Hrs of Sleep`,
     children: <div>
-
+      <Graph options={hrsOfSleep} series={hrsOfSleepData} type="line" />
+      <div>
+        <Row>
+          <Title className="subtitle" level={4}>Watch List</Title>
+        </Row>
+        <Row className="patient-cards">
+          <PatientCard 
+            name="Doe, John" 
+            arrow={<ArrowDownOutlined style={{fontSize: 30, color: "red"}}/>}
+            percentage="11"
+            decimal="28"
+            metric="Step Count"
+            metricDescription="lorem ipsum dolor"
+          ></PatientCard>
+          <PatientCard 
+            name="Smith, Jane" 
+            arrow={<ArrowUpOutlined style={{fontSize: 30, color: "green"}}/>}
+            percentage="14"
+            decimal="67"
+            metric="Step Count"
+            metricDescription="lorem ipsum dolor"
+          ></PatientCard>
+          <PatientCard 
+            name="Johnson, Alice" 
+            arrow={<ArrowUpOutlined style={{fontSize: 30, color: "green"}}/>}
+            percentage="26"
+            decimal="34"
+            metric="Step Count"
+            metricDescription="lorem ipsum dolor"
+          ></PatientCard>
+        </Row>
+      </div>
     </div>,
   },
 ];
