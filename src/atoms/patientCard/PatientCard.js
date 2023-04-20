@@ -1,28 +1,25 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './PatientCard.css';
-import { Typography, Card, Tooltip } from 'antd';
-import { UserOutlined, QuestionCircleOutlined } from '@ant-design/icons';
+import { Card } from 'antd';
 import 'antd/dist/reset.css';
-const { Title } = Typography;
+import StatisticRow from '../statisticRow/StatisticRow';
 
 
 function PatientCard(props) {
   return (
-      <Card title={props.name} hoverable={true} extra={<span class="dot"></span>} style={{width: 350}} className="patient-card">
-        <div className='patient-card-content'>
-            <div className='patient-card-value'>
-                <span className='patient-card-arrow'>{props.arrow}</span>
-                <div className='patient-card-percentage'>
-                    <Title level={2}>{props.percentage}</Title>
-                    <Title level={4}>.{props.decimal}%</Title>
-                </div>
-            </div>
-            <div className='patient-card-metric-info'>
-                <Title style={{color: 'gray', fontWeight: 'normal'}} className="patient-card-metric" level={5}>{props.metric}</Title>
-                <Tooltip placement="top" title={props.metricDescription}><QuestionCircleOutlined /></Tooltip>
-            </div>
-        </div>
-      </Card>
+    <Link to="/patient">
+        <Card title={props.name} hoverable={true} extra={<span class="dot" style={{backgroundColor: props.dotColor}}></span>} style={{width: 350}} className="patient-card">
+            {props.metricData.map((data) => <StatisticRow 
+                                                    metric={data.metric}
+                                                    percentage={data.percentage}
+                                                    decimal={data.decimal}
+                                                    arrow={data.arrow}
+                                                    />)}
+        </Card>
+  </Link>
+  
+      
   );
 };
 

@@ -1,22 +1,13 @@
 import React from 'react';
-import './index.css';
-import { Space, Tag } from 'antd';
-import { ColumnsType } from 'antd/es/table';
+import { Tag } from 'antd';
+import { Link } from "react-router-dom";
 
-// interface DataType {
-//   key: string;
-//   name: string;
-//   age: number;
-//   address: string;
-//   tags: string[];
-// }
-
-const Columns = [
+const tableColumns = [
   {
     title: 'Name',
     dataIndex: 'name',
     key: 'name',
-    render: (text) => <a>{text}</a>,
+    render: (text) => <Link to="/patient">{text}</Link>,
   },
   {
     title: 'Age',
@@ -25,23 +16,23 @@ const Columns = [
   },
   {
     title: 'Step Count',
-    dataIndex: 'step count',
-    key: 'step count',
+    dataIndex: 'stepCount',
+    key: 'stepCount',
   },
   {
     title: 'Heart Rate',
-    dataIndex: 'heart rate',
-    key: 'heart rate',
+    dataIndex: 'heartRate',
+    key: 'heartRate',
   },
   {
     title: 'Hrs of Sleep',
-    dataIndex: 'hrs of sleep',
-    key: 'hrs of sleep',
+    dataIndex: 'hrsOfSleep',
+    key: 'hrsOfSleep',
   },
   {
     title: 'Physical Functioning',
-    key: 'physical functioning',
-    dataIndex: 'physical functioning',
+    key: 'pfTags',
+    dataIndex: 'pfTags',
     render: (_, { pfTags }) => (
       <>
         {pfTags.map((pfTag) => {
@@ -63,8 +54,8 @@ const Columns = [
   },
   {
     title: 'Pain Interference',
-    key: 'pain interference',
-    dataIndex: 'pain interference',
+    key: 'piTags',
+    dataIndex: 'piTags',
     render: (_, { piTags }) => (
       <>
         {piTags.map((piTag) => {
@@ -86,28 +77,4 @@ const Columns = [
   },
 ];
 
-const data = [
-  {
-    key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
-    pfTags: ['severe', 'moderate'],
-  },
-  {
-    key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-    pfTags: ['moderate'],
-  },
-  {
-    key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sydney No. 1 Lake Park',
-    pfTags: ['moderate', 'good'],
-  },
-];
-
-export default Columns;
+export default tableColumns;
