@@ -23,7 +23,7 @@ const App = () => {
                 "colorSuccess": "#52c41a",
                 "colorWarning": "#fbaf5d",
                 "colorError": "#f37f89",
-                "fontSizeHeading4": 16,
+                "fontSizeHeading4": 18,
                 "fontSizeHeading5": 14,
               }
         }}

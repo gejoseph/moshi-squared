@@ -105,8 +105,55 @@ h6 {
 
 .patient-fitbit-row, .patient-promis-row {
   display: flex;
-  float: left;
+  flex-direction: column;
+}
+
+.patient-fitbit-title, .patient-fitbit-row, .patient-promis-title, .patient-promis-row {
+  display: flex;
+  width: 100%;
   justify-content: space-between;
+  align-items: baseline;
+}
+
+.patient-fitbit-options, .patient-promis-options {
+  display: flex;
+  align-items: flex-end;
+}
+
+.patient-fitbit-switch-group, .patient-promis-switch-group {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.patient-fitbit-switch, .patient-promis-switch {
+  margin-right: 6px;
+}
+
+.patient-fitbit-segmented, .patient-promis-segmented {
+  margin-bottom: 2px;
+}
+
+.patient-fitbit-metric {
+  margin-top: 10px;
+}
+
+.patient-promis-metric {
+  display: flex;
+  justify-content: space-between;
+}
+
+.patient-fibit-metric-graph, .patient-promis-metric-graph {
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.patient-fibit-metric-title, .patient-promis-metric-title {
+  float: left;
+  padding-top: 10px;
+  margin-bottom: 40px;
 }
 
 .App-logo {
