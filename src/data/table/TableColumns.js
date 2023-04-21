@@ -15,7 +15,7 @@ const tableColumns = [
     //   { text: 'Male', value: 'male' },
     //   { text: 'Female', value: 'female' },
     // ],
-    render: (name) => <Link to="/patient">{name}</Link>,
+    render: (name) => <Link to="/patient" >{name}</Link>,
   },
   {
     title: 'Age',

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import './App.css';
@@ -17,6 +17,10 @@ const onChange = (checked) => {
   };
 
 const Patient = (props) => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
         const [value, setValue] = useState('Last Week');
     

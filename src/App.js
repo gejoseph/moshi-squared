@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
 import 'antd/dist/reset.css';
@@ -9,6 +9,10 @@ import Dashboard from "./Dashboard";
 
 
 const App = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   var [patientIndex, setPatientIndex] = useState(0);
 

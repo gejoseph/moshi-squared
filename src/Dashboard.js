@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import './App.css';
 import 'antd/dist/reset.css';
 import { Layout, Card, Typography, Row, Col, Input, Select, Tabs, Table } from 'antd';
@@ -59,6 +59,10 @@ const onChange2 = (pagination, filters, sorter, extra) => {
 
 const Dashboard = (props) => {
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     const metrics = [
         {
           key: '1',
@@ -91,7 +95,7 @@ const Dashboard = (props) => {
           key: '1',
           label: `Table View`,
           children: <div>
-            <Table columns={tableColumns} dataSource={tableData} onChange={onChange2} />
+            <Table columns={tableColumns} dataSource={tableData} onChange={onChange2} setIndex={props.setIndex}/>
           </div>,
         },
         {
