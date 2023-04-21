@@ -22,7 +22,7 @@ function StatisticRow(props) {
         <div className='patient-card-value'>
         <span className='patient-card-arrow'>{arrowType}</span>
         <div className='patient-card-percentage'>
-            <Title level={2}>{props.percentage}</Title>
+            <Title level={3}>{props.percentage}</Title>
             <Title level={4}>.{props.decimal}%</Title>
         </div>
         </div>

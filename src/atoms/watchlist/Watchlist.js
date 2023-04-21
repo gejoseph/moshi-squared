@@ -3,6 +3,8 @@ import { Typography, Row } from 'antd';
 import PatientCard from '../patientCard/PatientCard';
 import patientData from '../../data/PatientData';
 import 'antd/dist/reset.css';
+import '../../App.css'
+import './Watchlist.css'
 
 const { Title } = Typography;
 
@@ -22,11 +24,13 @@ function Watchlist(props) {
         <Row>
         <Title className="subtitle" level={4}>Watch List</Title>
         </Row>
-        <Row className="patient-cards">
+        <Row className="watchlist-patient-cards">
             {patientData.map((patient) => <PatientCard 
                                                 name={patient.name}
                                                 metricData={[patient.metricData[key]]}
+                                                index={patient.key}
                                                 dotColor={patient.dotColor}
+                                                setIndex={props.setIndex}
                                                 />
             )}
         </Row>

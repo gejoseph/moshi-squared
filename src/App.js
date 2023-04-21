@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
 import 'antd/dist/reset.css';
@@ -8,9 +8,10 @@ import Patient from "./Patient";
 import Dashboard from "./Dashboard";
 
 
-class App extends Component {
+const App = () => {
 
-  render() {
+  var [patientIndex, setPatientIndex] = useState(0);
+
     return (
       <ConfigProvider
         theme={{
@@ -21,7 +22,9 @@ class App extends Component {
                 "colorInfo": "#904199",
                 "colorSuccess": "#52c41a",
                 "colorWarning": "#fbaf5d",
-                "colorError": "#f37f89"
+                "colorError": "#f37f89",
+                "fontSizeHeading4": 16,
+                "fontSizeHeading5": 14,
               }
         }}
       >
@@ -30,15 +33,15 @@ class App extends Component {
         <Navbar/>
         <Router>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/patient" element={<Patient/>} />
+          <Route path="/" element={<Dashboard setIndex={setPatientIndex} />} />
+          <Route path="/patient" element={<Patient index={patientIndex}/>} />
         </Routes> 
       </Router>
       </Layout>
     </ConfigProvider>
       
     );
-  }
+
 }
 
 export default App;

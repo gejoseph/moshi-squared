@@ -7,27 +7,51 @@ const tableColumns = [
     title: 'Name',
     dataIndex: 'name',
     key: 'name',
-    render: (text) => <Link to="/patient">{text}</Link>,
+    sorter: {
+      compare: (a, b) => a.name <= b.name,
+      multiple: 3,
+    },
+    // filters: [
+    //   { text: 'Male', value: 'male' },
+    //   { text: 'Female', value: 'female' },
+    // ],
+    render: (name) => <Link to="/patient">{name}</Link>,
   },
   {
     title: 'Age',
     dataIndex: 'age',
     key: 'age',
+    sorter: {
+      compare: (a, b) => a.age - b.age,
+      multiple: 3,
+    },
   },
   {
     title: 'Step Count',
     dataIndex: 'stepCount',
     key: 'stepCount',
+    sorter: {
+      compare: (a, b) => a.stepCount - b.stepCount,
+      multiple: 3,
+    },
   },
   {
     title: 'Heart Rate',
     dataIndex: 'heartRate',
     key: 'heartRate',
+    sorter: {
+      compare: (a, b) => a.heartRate - b.heartRate,
+      multiple: 3,
+    },
   },
   {
     title: 'Hrs of Sleep',
     dataIndex: 'hrsOfSleep',
     key: 'hrsOfSleep',
+    sorter: {
+      compare: (a, b) => a.hrsOfSleep - b.hrsOfSleep,
+      multiple: 3,
+    },
   },
   {
     title: 'Physical Functioning',

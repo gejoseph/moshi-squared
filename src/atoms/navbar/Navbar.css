@@ -4,7 +4,7 @@
     background-color: #434343;
     overflow: hidden;
     color: #f1f1f1;
-    padding: 1% 2% 0% 2%;
+    padding: 1% 2% 0.5% 2%;
     display: flex;
     justify-content: space-between;
 }
@@ -17,5 +17,5 @@
     min-width: 6.5%;
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: space-around;
 }

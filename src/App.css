@@ -11,6 +11,10 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
+h6 {
+  font-size: 12px;
+}
+
 #main {
   /* padding: 25px; */
 }
@@ -35,6 +39,10 @@ html {
 
 .card-filter {
   margin: 0 10px;
+}
+
+.watchlist-card {
+  margin-right: 15px;
 }
 
 #search {
@@ -66,8 +74,39 @@ html {
   text-align: left;
 }
 
-.ant-table-row {
-  
+#patient {
+
+}
+
+.patient-header {
+
+}
+
+.patient-header-name {
+  display: flex;
+  float: left;
+  align-items: baseline;
+}
+
+.patient-header-summary {
+  margin-top: 40px;
+}
+
+.patient-header-summary-profile {
+
+}
+
+.patient-header-summary-profile-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  color: gray;
+}
+
+.patient-fitbit-row, .patient-promis-row {
+  display: flex;
+  float: left;
+  justify-content: space-between;
 }
 
 .App-logo {
