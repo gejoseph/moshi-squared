@@ -1,5 +1,7 @@
 import patientData from "../PatientData"
 
+// idea for aggregate, make it the last index for each data and then add that to the series on Patient.js
+
 const stepCountData = [
     {
         name: patientData[0].name,

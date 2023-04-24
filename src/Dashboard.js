@@ -5,7 +5,7 @@ import { Layout, Card, Typography, Row, Col, Input, Select, Tabs, Table } from '
 import Graph from "./atoms/graph/Graph";
 import tableColumns from "./data/table/TableColumns";
 import tableData from "./data/table/TableData";
-import { stepCountAll, heartRateAll, hrsOfSleepAll } from "./data/graph/Axes";
+import { stepCountAll, stepCount1, stepCount2, stepCount3, stepCount4, heartRateAll, heartRate1, heartRate2, heartRate3, heartRate4, hrsOfSleepAll, hrsOfSleep1, hrsOfSleep2, hrsOfSleep3, hrsOfSleep4 } from "./data/graph/Axes";
 import { stepCountData, heartRateData, hrsOfSleepData } from "./data/graph/GraphData";
 import Watchlist from "./atoms/watchlist/Watchlist";
 import Timeline from "./data/timeline/Timeline";
@@ -14,41 +14,15 @@ const { Title } = Typography;
 const { Search } = Input;
 const { Option } = Select;
 
+
 const onSearch = (value) => console.log(value);
 const handleChange = (value) => {
   console.log(`${value}`);
-  
 };
 const onChange1 = (key) => {
   console.log(key);
 };
 
-// const metrics = [
-//   {
-//     key: '1',
-//     label: `Step Count`,
-//     children: <div>
-//       <Graph options={stepCountAll} series={stepCountData} type="line" />
-//       <Watchlist metric="Step Count"/>
-//     </div>,
-//   },
-//   {
-//     key: '2',
-//     label: `Heart Rate`,
-//     children: <div>
-//       <Graph options={heartRateAll} series={heartRateData} type="line" />
-//       <Watchlist metric="Heart Rate"/>
-//     </div>,
-//   },
-//   {
-//     key: '3',
-//     label: `Hrs of Sleep`,
-//     children: <div>
-//       <Graph options={hrsOfSleepAll} series={hrsOfSleepData} type="line" />
-//       <Watchlist metric="Hrs of Sleep"/>
-//     </div>,
-//   },
-// ];
 
 const onChange2 = (pagination, filters, sorter, extra) => {
     console.log('params', pagination, filters, sorter, extra);
@@ -124,15 +98,15 @@ const Dashboard = (props) => {
                         onChange={handleChange}
                         optionLabelProp="label"
                     >
-                    <Option value="12" label="All Weeks">
+                    <Option value="All Weeks" label="All Weeks">
                     </Option>
-                    <Option value="1" label="Weeks 1-3">
+                    <Option value="Weeks 1-3" label="Weeks 1-3">
                     </Option>
-                    <Option value="4" label="Weeks 4-6">
+                    <Option value="Weeks 4-6" label="Weeks 4-6">
                     </Option>
-                    <Option value="7" label="Weeks 7-9">
+                    <Option value="Weeks 7-9" label="Weeks 7-9">
                     </Option>
-                    <Option value="10" label="Weeks 10-12">
+                    <Option value="Weeks 10-12" label="Weeks 10-12">
                     </Option>
                     </Select>
                 </Col>

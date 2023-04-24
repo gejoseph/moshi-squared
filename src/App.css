@@ -90,6 +90,8 @@ h6 {
 
 .patient-header-summary {
   margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .patient-header-summary-profile {
@@ -154,6 +156,32 @@ h6 {
   float: left;
   padding-top: 10px;
   margin-bottom: 40px;
+}
+
+.patient-metric-summaries {
+  display: flex;
+  justify-content: space-between;
+}
+
+.patient-metric-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  float: left;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.patient-card-metric-stat {
+  float: left;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.image {
+  width: 250px;
 }
 
 .App-logo {
