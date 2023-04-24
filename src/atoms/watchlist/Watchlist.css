@@ -4,4 +4,6 @@
 
 .watchlist-patient-cards {
     margin-top: 10px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
 }
