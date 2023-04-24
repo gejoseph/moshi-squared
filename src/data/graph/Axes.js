@@ -1,4 +1,4 @@
-const allWeeks = ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11", "Week 12"]
+const allWeeks = ["Week 0", "Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11", "Week 12"]
 
 const stepCountAll = {
     chart: {
@@ -6,41 +6,87 @@ const stepCountAll = {
     },
     xaxis: {
       categories: allWeeks
-    }
+    },
   }
 
-const stepCount1 = {
-    chart: {
-      id: "Step Count"
-    },
-    xaxis: {
-      categories: allWeeks.slice(0, 3)
-    }
+const stepCountAnnotated = {
+  chart: {
+    id: "Step Count"
+  },
+  xaxis: {
+    categories: allWeeks
+  },
+  annotations: {
+    xaxis: [{
+      x: "Week 3",
+      borderColor: '#00E396',
+      label: {
+        borderColor: '#00E396',
+        style: {
+          color: '#fff',
+          background: '#00E396',
+        },
+        text: 'First Check-in',
+        }
+      }, {
+      x: "Week 6",
+      borderColor: '#FEB019',
+      label: {
+        borderColor: '#FEB019',
+        style: {
+          color: '#fff',
+          background: '#FEB019',
+        },
+        text: 'Second Check-in',
+        }
+      }, {
+        x: "Week 11",
+        borderColor: '#775DD0',
+        label: {
+          borderColor: '#775DD0',
+          style: {
+            color: '#fff',
+            background: '#775DD0',
+          },
+          text: 'Third Check-in',
+          }
+        }, 
+    ],
   }
-const stepCount2 = {
-    chart: {
-      id: "Step Count"
-    },
-    xaxis: {
-      categories: allWeeks.slice(3, 6)
-    }
-  }
-const stepCount3 = {
-    chart: {
-      id: "Step Count"
-    },
-    xaxis: {
-      categories: allWeeks.slice(6, 9)
-    }
-  }
-const stepCount4 = {
-    chart: {
-      id: "Step Count"
-    },
-    xaxis: {
-      categories: allWeeks.slice(9, 12)
-    }
-  }
+}
+
+// const stepCount1 = {
+//     chart: {
+//       id: "Step Count"
+//     },
+//     xaxis: {
+//       categories: allWeeks.slice(0, 3)
+//     }
+//   }
+// const stepCount2 = {
+//     chart: {
+//       id: "Step Count"
+//     },
+//     xaxis: {
+//       categories: allWeeks.slice(3, 6)
+//     }
+//   }
+// const stepCount3 = {
+//     chart: {
+//       id: "Step Count"
+//     },
+//     xaxis: {
+//       categories: allWeeks.slice(6, 9)
+//     }
+//   }
+// const stepCount4 = {
+//     chart: {
+//       id: "Step Count"
+//     },
+//     xaxis: {
+//       categories: allWeeks.slice(9, 12)
+//     }
+//   }
 
   const heartRateAll = {
     chart: {
@@ -51,41 +97,87 @@ const stepCount4 = {
     }
   }
 
-  const heartRate1 = {
+  const heartRateAnnotated = {
     chart: {
       id: "Heart Rate"
     },
     xaxis: {
-      categories: allWeeks.slice(0, 3)
+      categories: allWeeks
+    },
+    annotations: {
+      xaxis: [{
+        x: "Week 3",
+        borderColor: '#00E396',
+        label: {
+          borderColor: '#00E396',
+          style: {
+            color: '#fff',
+            background: '#00E396',
+          },
+          text: 'First Check-in',
+          }
+        }, {
+        x: "Week 6",
+        borderColor: '#FEB019',
+        label: {
+          borderColor: '#FEB019',
+          style: {
+            color: '#fff',
+            background: '#FEB019',
+          },
+          text: 'Second Check-in',
+          }
+        }, {
+          x: "Week 11",
+          borderColor: '#775DD0',
+          label: {
+            borderColor: '#775DD0',
+            style: {
+              color: '#fff',
+              background: '#775DD0',
+            },
+            text: 'Third Check-in',
+            }
+          }, 
+      ],
     }
   }
 
-  const heartRate2 = {
-    chart: {
-      id: "Heart Rate"
-    },
-    xaxis: {
-      categories: allWeeks.slice(3, 6)
-    }
-  }
+  // const heartRate1 = {
+  //   chart: {
+  //     id: "Heart Rate"
+  //   },
+  //   xaxis: {
+  //     categories: allWeeks.slice(0, 3)
+  //   }
+  // }
 
-  const heartRate3 = {
-    chart: {
-      id: "Heart Rate"
-    },
-    xaxis: {
-      categories: allWeeks.slice(6, 9)
-    }
-  }
+  // const heartRate2 = {
+  //   chart: {
+  //     id: "Heart Rate"
+  //   },
+  //   xaxis: {
+  //     categories: allWeeks.slice(3, 6)
+  //   }
+  // }
 
-  const heartRate4 = {
-    chart: {
-      id: "Heart Rate"
-    },
-    xaxis: {
-      categories: allWeeks.slice(9, 12)
-    }
-  }
+  // const heartRate3 = {
+  //   chart: {
+  //     id: "Heart Rate"
+  //   },
+  //   xaxis: {
+  //     categories: allWeeks.slice(6, 9)
+  //   }
+  // }
+
+  // const heartRate4 = {
+  //   chart: {
+  //     id: "Heart Rate"
+  //   },
+  //   xaxis: {
+  //     categories: allWeeks.slice(9, 12)
+  //   }
+  // }
 
 const hrsOfSleepAll = {
     chart: {
@@ -96,56 +188,105 @@ const hrsOfSleepAll = {
     }
   }
 
-  const hrsOfSleep1 = {
+  const hrsOfSleepAnnotated = {
     chart: {
       id: "Hrs of Sleep"
     },
     xaxis: {
-      categories: allWeeks.slice(0, 3)
+      categories: allWeeks
+    },
+    annotations: {
+      xaxis: [{
+        x: "Week 3",
+        borderColor: '#00E396',
+        label: {
+          borderColor: '#00E396',
+          style: {
+            color: '#fff',
+            background: '#00E396',
+          },
+          text: 'First Check-in',
+          }
+        }, {
+        x: "Week 6",
+        borderColor: '#FEB019',
+        label: {
+          borderColor: '#FEB019',
+          style: {
+            color: '#fff',
+            background: '#FEB019',
+          },
+          text: 'Second Check-in',
+          }
+        }, {
+          x: "Week 11",
+          borderColor: '#775DD0',
+          label: {
+            borderColor: '#775DD0',
+            style: {
+              color: '#fff',
+              background: '#775DD0',
+            },
+            text: 'Third Check-in',
+            }
+          }, 
+      ],
     }
   }
 
-  const hrsOfSleep2 = {
-    chart: {
-      id: "Hrs of Sleep"
-    },
-    xaxis: {
-      categories: allWeeks.slice(3, 6)
-    }
-  }
+  // const hrsOfSleep1 = {
+  //   chart: {
+  //     id: "Hrs of Sleep"
+  //   },
+  //   xaxis: {
+  //     categories: allWeeks.slice(0, 3)
+  //   }
+  // }
 
-  const hrsOfSleep3 = {
-    chart: {
-      id: "Hrs of Sleep"
-    },
-    xaxis: {
-      categories: allWeeks.slice(6, 9)
-    }
-  }
+  // const hrsOfSleep2 = {
+  //   chart: {
+  //     id: "Hrs of Sleep"
+  //   },
+  //   xaxis: {
+  //     categories: allWeeks.slice(3, 6)
+  //   }
+  // }
 
-  const hrsOfSleep4 = {
-    chart: {
-      id: "Hrs of Sleep"
-    },
-    xaxis: {
-      categories: allWeeks.slice(9, 12)
-    }
-  }
+  // const hrsOfSleep3 = {
+  //   chart: {
+  //     id: "Hrs of Sleep"
+  //   },
+  //   xaxis: {
+  //     categories: allWeeks.slice(6, 9)
+  //   }
+  // }
+
+  // const hrsOfSleep4 = {
+  //   chart: {
+  //     id: "Hrs of Sleep"
+  //   },
+  //   xaxis: {
+  //     categories: allWeeks.slice(9, 12)
+  //   }
+  // }
 
   export {
     stepCountAll,
-    stepCount1,
-    stepCount2,
-    stepCount3,
-    stepCount4,
+    stepCountAnnotated,
+    // stepCount1,
+    // stepCount2,
+    // stepCount3,
+    // stepCount4,
     heartRateAll,
-    heartRate1,
-    heartRate2,
-    heartRate3,
-    heartRate4,
+    heartRateAnnotated,
+    // heartRate1,
+    // heartRate2,
+    // heartRate3,
+    // heartRate4,
     hrsOfSleepAll,
-    hrsOfSleep1,
-    hrsOfSleep2,
-    hrsOfSleep3,
-    hrsOfSleep4
+    hrsOfSleepAnnotated,
+    // hrsOfSleep1,
+    // hrsOfSleep2,
+    // hrsOfSleep3,
+    // hrsOfSleep4
 }

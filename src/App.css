@@ -176,13 +176,14 @@ h6 {
   float: left;
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 80%;
   justify-content: space-between;
 }
 
 .image {
   width: 250px;
 }
+
 
 .App-logo {
   height: 40vmin;

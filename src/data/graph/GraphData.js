@@ -83,10 +83,6 @@ const stepCountData = [
         name: patientData[19].name,
         data: patientData[19].metricData[0].data
     },
-    {
-        name: patientData[20].name,
-        data: patientData[20].metricData[0].data
-    },
 ]
 
 const heartRateData = [
@@ -170,10 +166,6 @@ const heartRateData = [
         name: patientData[19].name,
         data: patientData[19].metricData[1].data
     },
-    {
-        name: patientData[20].name,
-        data: patientData[20].metricData[1].data
-    },
 ]
 
 const hrsOfSleepData = [
@@ -256,10 +248,6 @@ const hrsOfSleepData = [
     {
         name: patientData[19].name,
         data: patientData[19].metricData[2].data
-    },
-    {
-        name: patientData[20].name,
-        data: patientData[20].metricData[2].data
     },
 ]
 

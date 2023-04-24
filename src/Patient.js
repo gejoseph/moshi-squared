@@ -5,7 +5,7 @@ import image from "./assets/Image.png"
 import './App.css';
 import 'antd/dist/reset.css';
 import { Layout, Card, Row, Col, Typography, Switch, Segmented, Tooltip } from 'antd';
-import { stepCountAll, heartRateAll, hrsOfSleepAll } from "./data/graph/Axes";
+import { stepCountAnnotated, heartRateAnnotated, hrsOfSleepAnnotated } from "./data/graph/Axes";
 import { stepCountData, heartRateData, hrsOfSleepData } from "./data/graph/GraphData";
 import patientData from "./data/PatientData";
 import Graph from "./atoms/graph/Graph";
@@ -108,19 +108,19 @@ const Patient = (props) => {
                 <Row className="patient-fitbit-metric">
                     <Col span={24} className="patient-fibit-metric-graph" >
                         <Title level={4} className="patient-fibit-metric-title">Step Count</Title>
-                        <Graph options={stepCountAll} series={[stepCountData[props.index]]} type="line" />
+                        <Graph options={stepCountAnnotated} series={[stepCountData[props.index]]} type="line" />
                     </Col>
                 </Row>
                 <Row className="patient-fitbit-metric">
                     <Col span={24} className="patient-fibit-metric-graph" >
                         <Title level={4} className="patient-fibit-metric-title">Heart Rate</Title>
-                        <Graph options={heartRateAll} series={[heartRateData[props.index]]} type="line" />
+                        <Graph options={heartRateAnnotated} series={[heartRateData[props.index]]} type="line" />
                     </Col>
                 </Row>
                 <Row className="patient-fitbit-metric">
                     <Col span={24} className="patient-fibit-metric-graph" >
                         <Title level={4} className="patient-fibit-metric-title">Hrs of Sleep</Title>
-                        <Graph options={hrsOfSleepAll} series={[hrsOfSleepData[props.index]]} type="line" />
+                        <Graph options={hrsOfSleepAnnotated} series={[hrsOfSleepData[props.index]]} type="line" />
                     </Col>
                 </Row>
             </Card>
@@ -140,11 +140,11 @@ const Patient = (props) => {
                 <Row className="patient-promis-metric">
                     <Col span={11} className="patient-promis-metric-graph" >
                         <Title level={4} className="patient-promis-metric-title">Physical Functioning</Title>
-                        <Graph options={hrsOfSleepAll} series={hrsOfSleepData} type="line" />
+                        <Graph options={hrsOfSleepAnnotated} series={[hrsOfSleepData[props.index]]} type="line" />
                     </Col>
                     <Col span={11} className="patient-promis-metric-graph" >
                         <Title level={4} className="patient-promis-metric-title">Pain Interference</Title>
-                        <Graph options={hrsOfSleepAll} series={hrsOfSleepData} type="line" />
+                        <Graph options={hrsOfSleepAnnotated} series={[hrsOfSleepData[props.index]]} type="line" />
                     </Col>
                 </Row>
             </Card>
