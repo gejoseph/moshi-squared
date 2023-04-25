@@ -14,7 +14,7 @@ function Timeline(props) {
       <Row className='timeline'>
         <Col className="weeks-group">
             <div className='weeks-group-header'>
-                <Title level={4}>Weeks 1-3</Title>
+                <Title level={4}>Weeks 0-3</Title>
                 <Badge count={2} color='#904199'></Badge>
             </div>
             <Card className='weeks-group-content' bodyStyle={{padding: "4px"}}>
@@ -24,12 +24,6 @@ function Timeline(props) {
                     dotColor={patientData[0].dotColor} 
                     index={patientData[0].key}
                     setIndex={props.setIndex}/>
-                <PatientCard className="weeks-group-card"
-                    name={patientData[1].name} 
-                    metricData={patientData[1].metricData} 
-                    dotColor={patientData[1].dotColor}
-                    index={patientData[1].key}
-                    setIndex={props.setIndex} />
             </Card>
         </Col>
         <Col className="weeks-group">
@@ -39,10 +33,10 @@ function Timeline(props) {
             </div>
             <Card className='weeks-group-content' bodyStyle={{padding: "4px"}}>
                 <PatientCard className="weeks-group-card"
-                    name={patientData[2].name} 
-                    metricData={patientData[2].metricData} 
-                    dotColor={patientData[2].dotColor} 
-                    index={patientData[2].key}
+                    name={patientData[1].name} 
+                    metricData={patientData[1].metricData} 
+                    dotColor={patientData[1].dotColor}
+                    index={patientData[1].key}
                     setIndex={props.setIndex} />
             </Card>
         </Col>
@@ -67,10 +61,10 @@ function Timeline(props) {
             </div>
             <Card className='weeks-group-content' bodyStyle={{padding: "4px"}}>
                 <PatientCard className="weeks-group-card"
-                    name={patientData[2].name} 
-                    metricData={patientData[2].metricData} 
-                    dotColor={patientData[2].dotColor} 
-                    index={patientData[2].key}
+                    name={patientData[3].name} 
+                    metricData={patientData[3].metricData} 
+                    dotColor={patientData[3].dotColor} 
+                    index={patientData[3].key}
                     setIndex={props.setIndex} />
             </Card>
         </Col>

@@ -7,6 +7,7 @@ const stepCountAll = {
     xaxis: {
       categories: allWeeks
     },
+    colors: ["#fbaf5d", "#fbaf5d", "#52c41a", "#f37f89"],
   }
 
 const stepCountAnnotated = {
@@ -94,7 +95,8 @@ const stepCountAnnotated = {
     },
     xaxis: {
       categories: allWeeks
-    }
+    },
+    colors: ["#fbaf5d", "#fbaf5d", "#52c41a", "#f37f89"],
   }
 
   const heartRateAnnotated = {
@@ -185,7 +187,8 @@ const hrsOfSleepAll = {
     },
     xaxis: {
       categories: allWeeks
-    }
+    },
+    colors: ["#fbaf5d", "#fbaf5d", "#52c41a", "#f37f89"],
   }
 
   const hrsOfSleepAnnotated = {
@@ -270,6 +273,98 @@ const hrsOfSleepAll = {
   //   }
   // }
 
+  const physicalFuncAnnotated = {
+    chart: {
+      id: "Physical Functioning"
+    },
+    xaxis: {
+      categories: allWeeks
+    },
+    annotations: {
+      xaxis: [{
+        x: "Week 3",
+        borderColor: '#00E396',
+        label: {
+          borderColor: '#00E396',
+          style: {
+            color: '#fff',
+            background: '#00E396',
+          },
+          text: 'First Check-in',
+          }
+        }, {
+        x: "Week 6",
+        borderColor: '#FEB019',
+        label: {
+          borderColor: '#FEB019',
+          style: {
+            color: '#fff',
+            background: '#FEB019',
+          },
+          text: 'Second Check-in',
+          }
+        }, {
+          x: "Week 11",
+          borderColor: '#775DD0',
+          label: {
+            borderColor: '#775DD0',
+            style: {
+              color: '#fff',
+              background: '#775DD0',
+            },
+            text: 'Third Check-in',
+            }
+          }, 
+      ],
+    }
+  }
+
+  const painInterAnnotated = {
+    chart: {
+      id: "Pain Interference"
+    },
+    xaxis: {
+      categories: allWeeks
+    },
+    annotations: {
+      xaxis: [{
+        x: "Week 3",
+        borderColor: '#00E396',
+        label: {
+          borderColor: '#00E396',
+          style: {
+            color: '#fff',
+            background: '#00E396',
+          },
+          text: 'First Check-in',
+          }
+        }, {
+        x: "Week 6",
+        borderColor: '#FEB019',
+        label: {
+          borderColor: '#FEB019',
+          style: {
+            color: '#fff',
+            background: '#FEB019',
+          },
+          text: 'Second Check-in',
+          }
+        }, {
+          x: "Week 11",
+          borderColor: '#775DD0',
+          label: {
+            borderColor: '#775DD0',
+            style: {
+              color: '#fff',
+              background: '#775DD0',
+            },
+            text: 'Third Check-in',
+            }
+          }, 
+      ],
+    }
+  }
+
   export {
     stepCountAll,
     stepCountAnnotated,
@@ -289,4 +384,6 @@ const hrsOfSleepAll = {
     // hrsOfSleep2,
     // hrsOfSleep3,
     // hrsOfSleep4
+    physicalFuncAnnotated,
+    painInterAnnotated
 }

@@ -5,8 +5,8 @@ import image from "./assets/Image.png"
 import './App.css';
 import 'antd/dist/reset.css';
 import { Layout, Card, Row, Col, Typography, Switch, Segmented, Tooltip } from 'antd';
-import { stepCountAnnotated, heartRateAnnotated, hrsOfSleepAnnotated } from "./data/graph/Axes";
-import { stepCountData, heartRateData, hrsOfSleepData } from "./data/graph/GraphData";
+import { stepCountAnnotated, heartRateAnnotated, hrsOfSleepAnnotated, physicalFuncAnnotated, painInterAnnotated } from "./data/graph/Axes";
+import { stepCountData, heartRateData, hrsOfSleepData, physicalFuncData, painInterData } from "./data/graph/GraphData";
 import patientData from "./data/PatientData";
 import Graph from "./atoms/graph/Graph";
 
@@ -140,11 +140,11 @@ const Patient = (props) => {
                 <Row className="patient-promis-metric">
                     <Col span={11} className="patient-promis-metric-graph" >
                         <Title level={4} className="patient-promis-metric-title">Physical Functioning</Title>
-                        <Graph options={hrsOfSleepAnnotated} series={[hrsOfSleepData[props.index]]} type="line" />
+                        <Graph options={physicalFuncAnnotated} series={[physicalFuncData[props.index]]} type="line" />
                     </Col>
                     <Col span={11} className="patient-promis-metric-graph" >
                         <Title level={4} className="patient-promis-metric-title">Pain Interference</Title>
-                        <Graph options={hrsOfSleepAnnotated} series={[hrsOfSleepData[props.index]]} type="line" />
+                        <Graph options={painInterAnnotated} series={[painInterData[props.index]]} type="line" />
                     </Col>
                 </Row>
             </Card>

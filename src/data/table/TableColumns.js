@@ -61,7 +61,7 @@ const tableColumns = [
       <>
         {pfTags.map((pfTag) => {
           let color = 'yellow';
-          if (pfTag === 'severe') {
+          if (pfTag === 'poor') {
             color = 'red';
           }
           else if (pfTag === 'good') {
@@ -84,7 +84,7 @@ const tableColumns = [
       <>
         {piTags.map((piTag) => {
           let color = 'yellow';
-          if (piTag === 'severe') {
+          if (piTag === 'poor') {
             color = 'red';
           }
           else if (piTag === 'good') {
