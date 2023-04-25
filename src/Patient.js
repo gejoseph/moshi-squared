@@ -88,6 +88,7 @@ const Patient = (props) => {
                                 <Title level={5} style={{fontWeight: 'normal', margin: 0}}>{patientData[props.index].metricData[2].percentage}%  <CaretUpOutlined style={{color: '#52c41a'}}/></Title>
                             </div>
                             <img className="image" src={image} alt="flow"></img>
+                            {/* <Graph options={heartRateAnnotated} series={[heartRateData[props.index]]} type="line"/> */}
                         </div>
                     </Col>
                 </Row>
