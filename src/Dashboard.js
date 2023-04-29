@@ -43,7 +43,7 @@ const Dashboard = (props) => {
           label: `Step Count`,
           children: <div>
             <Graph options={stepCountAll} series={stepCountData} type="line" />
-            <Watchlist metric="Step Count" setIndex={props.setIndex} />
+            {/* <Watchlist metric="Step Count" setIndex={props.setIndex} /> */}
           </div>,
         },
         {
@@ -51,7 +51,7 @@ const Dashboard = (props) => {
           label: `Heart Rate`,
           children: <div>
             <Graph options={heartRateAll} series={heartRateData} type="line" />
-            <Watchlist metric="Heart Rate" setIndex={props.setIndex} />
+            {/* <Watchlist metric="Heart Rate" setIndex={props.setIndex} /> */}
           </div>,
         },
         {
@@ -59,24 +59,7 @@ const Dashboard = (props) => {
           label: `Hrs of Sleep`,
           children: <div>
             <Graph options={hrsOfSleepAll} series={hrsOfSleepData} type="line" />
-            <Watchlist metric="Hrs of Sleep" setIndex={props.setIndex} />
-          </div>,
-        },
-      ];
-
-      const views = [
-        {
-          key: '1',
-          label: `Table View`,
-          children: <div>
-            <Table columns={tableColumns(props.setIndex)} dataSource={tableData} onChange={onChange2} setIndex={props.setIndex}/>
-          </div>,
-        },
-        {
-          key: '2',
-          label: `Timeline View`,
-          children: <div>
-              <Timeline setIndex={props.setIndex}/>
+            {/* <Watchlist metric="Hrs of Sleep" setIndex={props.setIndex} /> */}
           </div>,
         },
       ];
@@ -84,6 +67,18 @@ const Dashboard = (props) => {
     return (
 
         <Content id="dashboard">
+            <Card size="large" className="card">
+                <Row className="card-top-row" align="middle">
+                <Col span={24}>
+                    <Title level={2} className="card-title">Patient List</Title>
+                </Col>
+                </Row>
+                <Row>
+                <Col span={24}>
+                    <Timeline setIndex={props.setIndex}/>
+                </Col>
+                </Row>
+            </Card>
             <Card size="large" className="card">
                 <Row className="card-top-row" align="middle">
                 <Col span={16}>
@@ -106,7 +101,7 @@ const Dashboard = (props) => {
                     </Option>
                     <Option value="Weeks 7-9" label="Weeks 7-9">
                     </Option>
-                    <Option value="Weeks 10-12" label="Weeks 10-12">
+                    <Option value="Weeks 10+" label="Weeks 10+">
                     </Option>
                     </Select>
                 </Col>
@@ -114,18 +109,6 @@ const Dashboard = (props) => {
                 <Row>
                 <Col span={24}>
                     <Tabs id="metric-tabs" className="tabs" defaultActiveKey="1" items={metrics} onChange={onChange1} />
-                </Col>
-                </Row>
-            </Card>
-            <Card size="large" className="card">
-                <Row className="card-top-row" align="middle">
-                <Col span={24}>
-                    <Title level={2} className="card-title">Patient Index</Title>
-                </Col>
-                </Row>
-                <Row>
-                <Col span={24}>
-                    <Tabs id="view-tabs" className="tabs" defaultActiveKey="1" items={views} onChange={onChange1} />
                 </Col>
                 </Row>
             </Card>

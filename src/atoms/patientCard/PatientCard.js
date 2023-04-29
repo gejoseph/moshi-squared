@@ -1,11 +1,29 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './PatientCard.css';
-import { Card } from 'antd';
+import { Card, Divider, Tag } from 'antd';
 import 'antd/dist/reset.css';
 import StatisticRow from '../statisticRow/StatisticRow';
 
 function PatientCard(props) {
+
+  var pfcolor = "green";
+  var picolor = "green";
+
+  if (props.pfTag === "poor"){
+    pfcolor = "red"
+  }
+  else if (props.pfTag === "moderate"){
+    pfcolor = "yellow"
+  }
+
+  if (props.piTag === "poor"){
+    pfcolor = "red"
+  }
+  else if (props.piTag === "moderate"){
+    pfcolor = "yellow"
+  }
+
 
   return (
     <Link to="/patient" onClick={()=> props.setIndex(props.index)}>
@@ -21,6 +39,9 @@ function PatientCard(props) {
                                                     decimal={data.decimal}
                                                     arrow={data.arrow}
                                                     />)}
+            <Divider/>
+            <Tag color={pfcolor}>Physical Functioning</Tag>
+            <Tag color={picolor}>Pain Interference</Tag>
         </Card>
   </Link>
   

@@ -1,19 +1,38 @@
 import React from 'react';
 import { Typography, Tooltip} from 'antd';
-import { ArrowUpOutlined, ArrowDownOutlined, QuestionCircleOutlined } from '@ant-design/icons';
+import { FallOutlined, RiseOutlined, QuestionCircleOutlined, MinusOutlined } from '@ant-design/icons';
 import 'antd/dist/reset.css';
 
 const { Title } = Typography;
 
 function StatisticRow(props) {
 
-    var arrowType = <ArrowUpOutlined style={{fontSize: 30, color: "#52c41a"}}/>
+    // mid is minus
+    var arrowType = <MinusOutlined style={{fontSize: 30, color: "gray"}}/>
 
     if (props.arrow === "down") {
-        arrowType = <ArrowDownOutlined style={{fontSize: 30, color: "#f37f89"}}/>
+        
+        // decrease in heart rate is good --> green
+        if (props.metric === "Heart Rate"){
+            arrowType = <FallOutlined style={{fontSize: 30, color: "#52c41a"}}/>
+        }
+        // decrease in steps or hours of sleep is bad --> red
+        else {
+            arrowType = <FallOutlined style={{fontSize: 30, color: "#f37f89"}}/>
+        }
+
+        
     }
-    else if (props.arrow === "mid"){
-        arrowType = <ArrowDownOutlined style={{fontSize: 30, color: "#fbaf5d"}}/>
+    else if (props.arrow === "up"){
+       
+        // increase in heart rate is bad --> red
+        if (props.metric === "Heart Rate"){
+            arrowType = <RiseOutlined style={{fontSize: 30, color: "#f37f89"}}/>
+        }
+        // increase in steps or hours of sleep is good --> green
+        else {
+            arrowType = <RiseOutlined style={{fontSize: 30, color: "#52c41a"}}/>
+        }
     } 
     
     
