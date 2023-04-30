@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 import { Link } from "react-router-dom";
-import { ArrowLeftOutlined, QuestionCircleOutlined, CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons';
+import { ArrowLeftOutlined, QuestionCircleOutlined, CaretUpOutlined, CaretDownOutlined, MinusOutlined } from '@ant-design/icons';
 import image from "./assets/frame.png"
 import './App.css';
 import 'antd/dist/reset.css';
@@ -35,7 +35,7 @@ const Patient = (props) => {
                 type: 'area',
                 toolbar: {
                     show: false
-                }
+                },
             },
             colors: ["#904199", "#acacac"],
             stroke: {
@@ -52,6 +52,14 @@ const Patient = (props) => {
             },
             yaxis: {
                 show: false
+            },
+            xaxis: {
+                labels: {
+                    show: false
+                },
+                axisTicks: {       
+                    show: false         
+                }
             },
             tooltip: {
                 show: false
@@ -223,7 +231,7 @@ const Patient = (props) => {
                             </div>
                             <div className='patient-card-metric-stat'>
                                 <Title level={4} style={{margin: 0}}>{patientData[props.index].metricData[0].avg}</Title>
-                                <Title level={5} style={{fontWeight: 'normal', margin: 0}}>{patientData[props.index].metricData[0].percentage}% {patientData[props.index].metricData[0].arrow === "down" ? <CaretDownOutlined style={{color: patientData[props.index].dotColor}}/> : <CaretUpOutlined style={{color: patientData[props.index].dotColor}}/>} </Title>
+                                <Title level={5} style={{fontWeight: 'normal', margin: 0}}>{patientData[props.index].metricData[0].percentage}% {patientData[props.index].metricData[0].arrow === "down" ? <CaretDownOutlined style={{color: "#f37f89"}}/> : (patientData[props.index].metricData[0].arrow === "mid" ? <MinusOutlined style={{color: "#acacac"}}/>: <CaretUpOutlined style={{color: "#52c41a"}}/>)} </Title>
                             </div>
                             {/* <img className="image" src={image} alt="flow"></img> */}
                             <Chart options={overviewOptions} series={[metricOverview[0]]} type="area" height={120}></Chart>
@@ -235,7 +243,7 @@ const Patient = (props) => {
                             </div>
                             <div className='patient-card-metric-stat'>
                                 <Title level={4} style={{margin: 0}}>{patientData[props.index].metricData[1].avg}</Title>
-                                <Title level={5} style={{fontWeight: 'normal', margin: 0}}>{patientData[props.index].metricData[1].percentage}% {patientData[props.index].metricData[1].arrow === "down" ? <CaretUpOutlined style={{color: patientData[props.index].dotColor}}/> : <CaretDownOutlined style={{color: patientData[props.index].dotColor}}/>} </Title>
+                                <Title level={5} style={{fontWeight: 'normal', margin: 0}}>{patientData[props.index].metricData[1].percentage}% {patientData[props.index].metricData[1].arrow === "down" ? <CaretDownOutlined style={{color: "#52c41a"}}/> : (patientData[props.index].metricData[1].arrow === "mid" ? <MinusOutlined style={{color: "#acacac"}}/>: <CaretUpOutlined style={{color: "#f37f89"}}/>)} </Title>
                             </div>
                             {/* <img className="image" src={image} alt="flow"></img> */}
                             <Chart options={overviewOptions} series={[metricOverview[1]]} type="area" height={120}></Chart>
@@ -247,7 +255,7 @@ const Patient = (props) => {
                             </div>
                             <div className='patient-card-metric-stat'>
                                 <Title level={4} style={{margin: 0}}>{patientData[props.index].metricData[2].avg}</Title>
-                                <Title level={5} style={{fontWeight: 'normal', margin: 0}}>{patientData[props.index].metricData[2].percentage}% {patientData[props.index].metricData[2].arrow === "down" ? <CaretDownOutlined style={{color: patientData[props.index].dotColor}}/> : <CaretUpOutlined style={{color: patientData[props.index].dotColor}}/>} </Title>
+                                <Title level={5} style={{fontWeight: 'normal', margin: 0}}>{patientData[props.index].metricData[2].percentage}% {patientData[props.index].metricData[2].arrow === "down" ? <CaretDownOutlined style={{color: "#f37f89"}}/> : (patientData[props.index].metricData[2].arrow === "mid" ? <MinusOutlined style={{color: "#acacac"}}/>: <CaretUpOutlined style={{color: "#52c41a"}}/>)} </Title>
                             </div>
                             {/* <img className="image" src={image} alt="flow"></img> */}
                             <Chart options={overviewOptions} series={[metricOverview[1]]} type="area" height={120}></Chart>
@@ -255,62 +263,6 @@ const Patient = (props) => {
                     </Col>
                 </Row>
             </Card>
-            {/* <Card className="patient-fitbit card" size="large">
-                <Row className="patient-fitbit-row">
-                    <Col span={24} className="patient-fitbit-title" >
-                        <Title level={3}>Fitbit Data</Title>
-                        <div className="patient-fitbit-options">
-                            <div className="patient-fitbit-switch-group">
-                                <Switch onChange={onChange} className="patient-fitbit-switch"/>
-                                <Title level={5}>Show Others</Title>
-                            </div>
-                            <Segmented options={['Last Week', 'Last Month', 'Last 3 Months']} value={value} onChange={setValue} className="patient-fitbit-segmented"/>
-                        </div>
-                    </Col>
-                </Row>
-                <Row className="patient-fitbit-metric">
-                    <Col span={24} className="patient-fibit-metric-graph" >
-                        <Title level={4} className="patient-fibit-metric-title">Step Count</Title>
-                        <Graph options={stepCountAnnotated} series={[stepCountData[props.index]]} type="line" />
-                    </Col>
-                </Row>
-                <Row className="patient-fitbit-metric">
-                    <Col span={24} className="patient-fibit-metric-graph" >
-                        <Title level={4} className="patient-fibit-metric-title">Heart Rate</Title>
-                        <Graph options={heartRateAnnotated} series={[heartRateData[props.index]]} type="line" />
-                    </Col>
-                </Row>
-                <Row className="patient-fitbit-metric">
-                    <Col span={24} className="patient-fibit-metric-graph" >
-                        <Title level={4} className="patient-fibit-metric-title">Hrs of Sleep</Title>
-                        <Graph options={hrsOfSleepAnnotated} series={[hrsOfSleepData[props.index]]} type="line" />
-                    </Col>
-                </Row>
-            </Card>
-            <Card className="patient-promis card" size="large">
-                <Row className="patient-promis-row">
-                    <Col span={24} className="patient-promis-title" >
-                        <Title level={3}>PROMIS Data</Title>
-                        <div className="patient-promis-options">
-                            <div className="patient-promis-switch-group">
-                                <Switch onChange={onChange} className="patient-promis-switch"/>
-                                <Title level={5}>Show Others</Title>
-                            </div>
-                            <Segmented options={['Last Week', 'Last Month', 'Last 3 Months']} value={value} onChange={setValue} className="patient-promis-segmented"/>
-                        </div>
-                    </Col>
-                </Row>
-                <Row className="patient-promis-metric">
-                    <Col span={11} className="patient-promis-metric-graph" >
-                        <Title level={4} className="patient-promis-metric-title">Physical Functioning</Title>
-                        <Graph options={physicalFuncAnnotated} series={[physicalFuncData[props.index]]} type="line" />
-                    </Col>
-                    <Col span={11} className="patient-promis-metric-graph" >
-                        <Title level={4} className="patient-promis-metric-title">Pain Interference</Title>
-                        <Graph options={painInterAnnotated} series={[painInterData[props.index]]} type="line" />
-                    </Col>
-                </Row>
-            </Card> */}
             <Card className="card">
                 <Row>
                     <Col span={24} className="patient-fitbit-title" >

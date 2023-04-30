@@ -33,9 +33,9 @@ const patientData = [
       },
     ],
     pfTags: ['poor'], // should just be one
-    pfScore: [34, 31, 22], // array
+    pfScore: [34, 31, 29, 27, 22, 21, 20], // array
     piTags: ['moderate'], // should just be one
-    piScore: [68, 72, 76], // array
+    piScore: [68, 72, 76, 75, 70, 67, 60], // array
     dotColor: '#52c41a',
     currentWeek: 3,
   },
@@ -87,7 +87,7 @@ const patientData = [
     metricData: [
       {
         metric: "Step Count",
-        data: [340, 533, 639, 729, 894, 2789, 3493],
+        data: [1340, 1533, 1639, 2729, 2500, 2789, 3493],
         avg: 3493,
         percentage: 25,
         decimal: 31,
@@ -95,7 +95,7 @@ const patientData = [
       },
       {
         metric: "Heart Rate",
-        data: [80, 82, 86, 88, 89, 91, 90],
+        data: [80, 79, 76, 78, 79, 91, 90],
         avg: 90,
         percentage: 1,
         decimal: 12,
@@ -134,7 +134,7 @@ const patientData = [
     },
     {
         metric: "Heart Rate",
-        data: [80, 90, 88, 85, 82, 79, 72, 76, 78, 85, 85, 85, 97], // by week for weeks 1-7
+        data: [80, 90, 88, 85, 82, 79, 75, 72, 76, 78, 85, 85, 85, 97], // by week for weeks 1-7
         avg: 78,
         percentage: 12,
         decimal: 67,
@@ -142,7 +142,7 @@ const patientData = [
     },
     {
         metric: "Hrs of Sleep",
-        data: [5, 5, 5, 5, 5.5, 6, 6.5, 7, 7.5], // by week for weeks 1-7
+        data: [5, 5, 5, 5, 5.5, 6, 6.5, 6.7, 6.5, 6.9, 7.2, 7, 7, 7.5], // by week for weeks 1-7
         avg: 7.5,
         percentage: 8,
         decimal: 57,
@@ -150,9 +150,9 @@ const patientData = [
     }
     ],
      pfTags: ["moderate"],
-        pfScore: [34, 36, 39, 42, 46, 47, 49, 34, 32],
+        pfScore: [34, 36, 37, 39, 42, 42, 43, 46, 44, 46, 47, 49, 34, 32],
         piTags: ["moderate"],
-        piScore: [76, 72, 68, 64, 62, 60, 58, 75, 78],
+        piScore: [76, 72, 70, 68, 65, 64, 67, 64, 62, 61, 60, 58, 75, 78],
         dotColor: "#f37f89",
         currentWeek: 10
 },
