@@ -38,13 +38,11 @@ const patientFitbitGraphOptions = {
         }
       },
     dataLabels: {
-    enabled: false,
-    enabledOnSeries: [1]
+        enabled: false,
+        enabledOnSeries: [1]
     },
     annotations: {
-        xaxis: [
-        
-        {
+        xaxis: [{
         x: "Week 0",
         strokeDashArray: 0,
         borderColor: '#BFACBF',
