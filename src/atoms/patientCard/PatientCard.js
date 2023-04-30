@@ -31,7 +31,7 @@ function PatientCard(props) {
             title={props.name} 
             hoverable={true} 
             extra={<span class="dot" style={{backgroundColor: props.dotColor}}></span>} 
-            style={{width: 320, fontWeight: 400}} 
+            style={{width: 320, fontWeight: 400, borderColor: props.dotColor}} 
             className="patient-card">
             {props.metricData.map((data) => <StatisticRow 
                                                     metric={data.metric}
