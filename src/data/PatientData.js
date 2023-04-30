@@ -36,7 +36,7 @@ const patientData = [
     pfScore: [34, 31, 22], // array
     piTags: ['poor'], // should just be one
     piScore: [68, 72, 76], // array
-    dotColor: '#fbaf5d',
+    dotColor: '#52c41a',
     currentWeek: 3,
   },
   {
@@ -114,7 +114,7 @@ const patientData = [
     pfScore: [22, 29, 31, 37, 39, 42, 43],
     piTags: ["good"],
     piScore: [75, 72, 69, 67, 63, 60, 58],
-    dotColor: "#52c41a",
+    dotColor: "#fbaf5d",
     currentWeek: 7
   },
   {
@@ -192,7 +192,7 @@ const patientData = [
         pfScore: [22, 29, 31, null, 39, 42, 43, null, 46, 48, 53, null, 56],
         piTags: ["good"],
         piScore: [75, 72, 69, null, 63, 60, 58, null, 55, 50, 45, null, 40],
-        dotColor: "#52c41a",
+        dotColor: "#f37f89",
         currentWeek: 12
   },
 // {
