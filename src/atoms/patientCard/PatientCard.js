@@ -18,10 +18,10 @@ function PatientCard(props) {
   }
 
   if (props.piTag === "poor"){
-    pfcolor = "red"
+    picolor = "red"
   }
   else if (props.piTag === "moderate"){
-    pfcolor = "yellow"
+    picolor = "yellow"
   }
 
 

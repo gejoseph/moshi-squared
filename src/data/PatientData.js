@@ -9,24 +9,24 @@ const patientData = [
     metricData: [
       {
         metric: 'Step Count',
-        data: [804, 1342, 3000],
-        avg: 3000,
+        data: [804, 1102, 1342, 904, 1500, 1700, 3791],
+        avg: 3791,
         percentage: 123,
         decimal: 6,
         arrow: 'up'
       },
       {
         metric: 'Heart Rate',
-        data: [81, 80, 75],
+        data: [101, 97, 95, 110, 81, 80, 75],
         avg: 75,
         percentage: 6,
         decimal: 25,
-        arrow: 'down'
+        arrow: 'mid'
       },
       {
         metric: 'Hrs of Sleep',
-        data: [5, 6, 7],
-        avg: 7,
+        data: [5, 6, 7, 7, 7, 7, 8],
+        avg: 8,
         percentage: 16,
         decimal: 67,
         arrow: 'up'
@@ -34,7 +34,7 @@ const patientData = [
     ],
     pfTags: ['poor'], // should just be one
     pfScore: [34, 31, 22], // array
-    piTags: ['poor'], // should just be one
+    piTags: ['moderate'], // should just be one
     piScore: [68, 72, 76], // array
     dotColor: '#52c41a',
     currentWeek: 3,
@@ -68,12 +68,12 @@ const patientData = [
             avg: 6.1,
             percentage: 9,
             decimal: 38,
-            arrow: "up"
+            arrow: "mid"
         }
     ],
     pfTags: ['poor'], // should just be one
     pfScore: [31, 28, 32, 36, 40], // array
-    piTags: ['poor'], // should just be one
+    piTags: ['moderate'], // should just be one
     piScore: [72, 72, 68, 64, 62], // array
     dotColor: '#fbaf5d',
     currentWeek: 5,
@@ -107,7 +107,7 @@ const patientData = [
         avg: 6.8,
         percentage: 5,
         decimal: 56,
-        arrow: "down"
+        arrow: "mid"
       }
     ],
     pfTags: ["moderate"],
@@ -126,17 +126,17 @@ const patientData = [
     metricData: [
     {
         metric: "Step Count",
-        data: [533, 1243, 1530, 2305, 2623, 3135, 3253, 3120, 3091], // by week for weeks 1-7
-        avg: 3091,
-        percentage: 3,
+        data: [533, 1243, 1530, 2305, 2623, 3000, 3135, 3100, 3222, 3253, 3135, 3253, 3120, 2403], // by week for weeks 1-7
+        avg: 2403,
+        percentage: 23,
         decimal: 9,
         arrow: "down"
     },
     {
         metric: "Heart Rate",
-        data: [80, 90, 88, 85, 82, 79, 72, 76, 78], // by week for weeks 1-7
+        data: [80, 90, 88, 85, 82, 79, 72, 76, 78, 85, 85, 85, 97], // by week for weeks 1-7
         avg: 78,
-        percentage: 16,
+        percentage: 12,
         decimal: 67,
         arrow: "up",
     },
@@ -146,7 +146,7 @@ const patientData = [
         avg: 7.5,
         percentage: 8,
         decimal: 57,
-        arrow: "up"
+        arrow: "mid"
     }
     ],
      pfTags: ["moderate"],
@@ -154,7 +154,7 @@ const patientData = [
         piTags: ["moderate"],
         piScore: [76, 72, 68, 64, 62, 60, 58, 75, 78],
         dotColor: "#f37f89",
-        currentWeek: 9
+        currentWeek: 10
 },
 {
     key: 4,
@@ -165,23 +165,23 @@ const patientData = [
     metricData: [
     {
         metric: "Step Count",
-        data: [340, 533, 639, null, 894, 2789, 3493, null, 3784, 3678, 3890, null, 3786],
+        data: [340, 533, 639, null, 894, 2789, 3493, null, 3784, 3678, 3890, 4000, 3786],
         avg: 2382,
         percentage: 2,
         decimal: 67,
-        arrow: "down"
+        arrow: "mid"
     },
     {
         metric: "Heart Rate",
-        data: [80, 82, 86, null, 86, 84, 85, null, 82, 86, 88, null, 91],
+        data: [80, 82, 86, null, 86, 84, 85, null, 82, 86, 88, 90, 91],
         avg: 85,
         percentage: 3,
         decimal: 41,
-        arrow: "up",
+        arrow: "mid",
     },
     {
         metric: "Hrs of Sleep",
-        data: [6.4, 6.7, 6.8, null, 6.4, 7.2, 6.8, null, 7.4, 6.9, 7.2, null, 8.1],
+        data: [6.4, 6.7, 6.8, null, 6.4, 7.2, 6.8, null, 7.4, 6.9, 7.2, 9.0, 8.1],
         avg: 6.9,
         percentage: 12,
         decimal: 5,
@@ -189,10 +189,10 @@ const patientData = [
     }
     ],
      pfTags: ["moderate"],
-        pfScore: [22, 29, 31, null, 39, 42, 43, null, 46, 48, 53, null, 56],
+        pfScore: [22, 29, 31, null, 39, 42, 43, null, 46, 48, 53, 56, 56],
         piTags: ["good"],
-        piScore: [75, 72, 69, null, 63, 60, 58, null, 55, 50, 45, null, 40],
-        dotColor: "#f37f89",
+        piScore: [75, 72, 69, null, 63, 60, 58, null, 55, 50, 45, 40, 40],
+        dotColor: "#52c41a",
         currentWeek: 12
   },
 // {

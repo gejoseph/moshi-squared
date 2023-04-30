@@ -73,11 +73,11 @@ const Patient = (props) => {
         const averageData = [
             {
                 name: "Average Step Count",
-                data: [3000, 2000, 1000, 1000, 1500, 2000, 2500, 3000, 3000, 3500, 4000, 4000, 4000, 4000, 4000, 4000]
+                data: [3000, 2000, 1000, 1000, 1500, 2000, 2700, 3000, 3000, 3500, 4000, 5000, 6500, 7000, 7000, 8000]
             },
             {
                 name: "Average Heart Rate",
-                data: [100, 110, 115, 80, 90, 100, 110, 100, 110, 110, 110, 110, 115, 120, 120, 120]
+                data: [100, 101, 100, 115, 105, 100, 95, 92, 89, 89, 90, 80, 85, 85, 84, 82]
             },
             {
                 name: "Average Hrs of Sleep",
@@ -223,7 +223,7 @@ const Patient = (props) => {
                             </div>
                             <div className='patient-card-metric-stat'>
                                 <Title level={4} style={{margin: 0}}>{patientData[props.index].metricData[0].avg}</Title>
-                                <Title level={5} style={{fontWeight: 'normal', margin: 0}}>{patientData[props.index].metricData[0].percentage}% {patientData[props.index].metricData[0].arrow === "down" ? <CaretUpOutlined style={{color: patientData[props.index].dotColor}}/> : <CaretDownOutlined style={{color: patientData[props.index].dotColor}}/>} </Title>
+                                <Title level={5} style={{fontWeight: 'normal', margin: 0}}>{patientData[props.index].metricData[0].percentage}% {patientData[props.index].metricData[0].arrow === "down" ? <CaretDownOutlined style={{color: patientData[props.index].dotColor}}/> : <CaretUpOutlined style={{color: patientData[props.index].dotColor}}/>} </Title>
                             </div>
                             {/* <img className="image" src={image} alt="flow"></img> */}
                             <Chart options={overviewOptions} series={[metricOverview[0]]} type="area" height={120}></Chart>
@@ -247,7 +247,7 @@ const Patient = (props) => {
                             </div>
                             <div className='patient-card-metric-stat'>
                                 <Title level={4} style={{margin: 0}}>{patientData[props.index].metricData[2].avg}</Title>
-                                <Title level={5} style={{fontWeight: 'normal', margin: 0}}>{patientData[props.index].metricData[2].percentage}% {patientData[props.index].metricData[2].arrow === "down" ? <CaretUpOutlined style={{color: patientData[props.index].dotColor}}/> : <CaretDownOutlined style={{color: patientData[props.index].dotColor}}/>} </Title>
+                                <Title level={5} style={{fontWeight: 'normal', margin: 0}}>{patientData[props.index].metricData[2].percentage}% {patientData[props.index].metricData[2].arrow === "down" ? <CaretDownOutlined style={{color: patientData[props.index].dotColor}}/> : <CaretUpOutlined style={{color: patientData[props.index].dotColor}}/>} </Title>
                             </div>
                             {/* <img className="image" src={image} alt="flow"></img> */}
                             <Chart options={overviewOptions} series={[metricOverview[1]]} type="area" height={120}></Chart>

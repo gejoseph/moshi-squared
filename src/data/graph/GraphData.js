@@ -360,6 +360,10 @@ const physicalFuncData = [
     {
         name: patientData[3].name,
         data: patientData[3].pfScore
+    },
+    {
+        name: patientData[4].name,
+        data: patientData[4].pfScore
     }
 ]
 
@@ -375,6 +379,10 @@ const painInterData = [
     {
         name: patientData[2].name,
         data: patientData[2].piScore
+    },
+    {
+        name: patientData[3].name,
+        data: patientData[3].piScore
     },
     {
         name: patientData[3].name,
