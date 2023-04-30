@@ -15,7 +15,7 @@ function Timeline(props) {
         <Col className="weeks-group">
             <div className='weeks-group-header'>
                 <Title level={4}>Weeks 0-3</Title>
-                <Badge count={2} color='#904199'></Badge>
+                <Badge count={1} color='#904199'></Badge>
             </div>
             <Card className='weeks-group-content' bodyStyle={{padding: "4px"}}>
                 <PatientCard className="weeks-group-card"
@@ -63,7 +63,7 @@ function Timeline(props) {
         <Col className="weeks-group">
             <div className='weeks-group-header'>
                 <Title level={4}>Weeks 10+</Title>
-                <Badge count={1} color='#904199'></Badge>
+                <Badge count={2} color='#904199'></Badge>
             </div>
             <Card className='weeks-group-content' bodyStyle={{padding: "4px"}}>
                 <PatientCard className="weeks-group-card"
