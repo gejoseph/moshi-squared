@@ -2,6 +2,101 @@ import patientData from "../PatientData"
 
 // idea for aggregate, make it the last index for each data and then add that to the series on Patient.js
 
+const allWeeks = ["Week -3", "Week -2", "Week -1", "Week 0", "Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11", "Week 12"]
+
+const patientFitbitGraphOptions = {
+    chart: {
+        height: 350,
+        type: 'column',
+        stacked: false,
+    },
+    colors: ["#904199", "#acacac"],
+    stroke: {
+        width: [0, 2, 5],
+        curve: 'smooth'
+     },
+    xaxis: {
+        categories: allWeeks
+    },
+    markers: {
+        size: 0
+    },
+    fill: {
+        opacity: [0.85, 0.25, 1],
+    },
+    tooltip: {
+        shared: true,
+        intersect: false,
+        y: {
+          formatter: function (y) {
+            if (typeof y !== "undefined") {
+              return y.toFixed(0);
+            }
+            return y;
+      
+          }
+        }
+      },
+    dataLabels: {
+    enabled: false,
+    enabledOnSeries: [1]
+    },
+    annotations: {
+        xaxis: [
+        
+        {
+        x: "Week 0",
+        strokeDashArray: 0,
+        borderColor: '#BFACBF',
+        label: {
+            borderColor: '#BFACBF',
+            style: {
+                color: '#904199',
+                background: '#D9CCD8',
+            },
+            text: 'Operation',
+            }
+        }, {
+        x: "Week 3",
+        strokeDashArray: 0,
+        borderColor: '#BFACBF',
+        label: {
+            borderColor: '#BFACBF',
+            style: {
+                color: '#904199',
+                background: '#D9CCD8',
+            },
+            text: 'First Check-in',
+            }
+        }, {
+        x: "Week 6",
+            strokeDashArray: 0,
+            borderColor: '#BFACBF',
+            label: {
+                borderColor: '#BFACBF',
+                style: {
+                    color: '#904199',
+                    background: '#D9CCD8',
+                },
+                text: 'Second Check-in',
+            }
+        }, {
+            x: "Week 11",
+            strokeDashArray: 0,
+            borderColor: '#BFACBF',
+            label: {
+                borderColor: '#BFACBF',
+                style: {
+                    color: '#904199',
+                    background: '#D9CCD8',
+            },
+            text: 'Third Check-in',
+            }
+            }, 
+        ],
+    },
+}
+
 const stepCountData = [
     {
         name: patientData[0].name,
@@ -294,5 +389,6 @@ export {
     heartRateData,
     hrsOfSleepData,
     physicalFuncData,
-    painInterData
+    painInterData,
+    patientFitbitGraphOptions
 }

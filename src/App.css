@@ -144,12 +144,18 @@ h6 {
 .patient-promis-metric {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+
 }
 
 .patient-fibit-metric-graph, .patient-promis-metric-graph {
   float: left;
   margin-top: 10px;
   margin-bottom: 40px;
+}
+
+.patient-promis-metric-graph {
+  width: 48%;
 }
 
 .patient-fibit-metric-title, .patient-promis-metric-title {
