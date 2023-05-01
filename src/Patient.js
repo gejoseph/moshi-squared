@@ -2,23 +2,15 @@ import React, { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 import { Link } from "react-router-dom";
 import { ArrowLeftOutlined, QuestionCircleOutlined, CaretUpOutlined, CaretDownOutlined, MinusOutlined } from '@ant-design/icons';
-import image from "./assets/frame.png"
 import './App.css';
 import 'antd/dist/reset.css';
-import { Layout, Card, Row, Col, Typography, Switch, Segmented, Tooltip, Tabs } from 'antd';
-import { stepCountAnnotated, heartRateAnnotated, hrsOfSleepAnnotated, physicalFuncAnnotated, painInterAnnotated } from "./data/graph/Axes";
+import { Layout, Card, Row, Col, Typography, Segmented, Tooltip, Tabs } from 'antd';
 import { stepCountData, heartRateData, hrsOfSleepData, physicalFuncData, painInterData, patientFitbitGraphOptions } from "./data/graph/GraphData";
-import { stepCountAll, heartRateAll, hrsOfSleepAll } from "./data/graph/Axes";
 import patientData from "./data/PatientData";
 import Graph from "./atoms/graph/Graph";
 
 const { Title } = Typography;
 const { Content } = Layout;
-
-const onChange = (checked) => {
-    console.log(`switch to ${checked}`);
-  };
-
   
 
 const Patient = (props) => {

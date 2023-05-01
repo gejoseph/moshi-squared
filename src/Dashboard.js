@@ -1,13 +1,10 @@
 import React, { useEffect } from "react";
 import './App.css';
 import 'antd/dist/reset.css';
-import { Layout, Card, Typography, Row, Col, Input, Select, Tabs, Table } from 'antd';
+import { Layout, Card, Typography, Row, Col, Input, Select, Tabs } from 'antd';
 import Graph from "./atoms/graph/Graph";
-import tableColumns from "./data/table/TableColumns";
-import tableData from "./data/table/TableData";
-import { stepCountAll, stepCount1, stepCount2, stepCount3, stepCount4, heartRateAll, heartRate1, heartRate2, heartRate3, heartRate4, hrsOfSleepAll, hrsOfSleep1, hrsOfSleep2, hrsOfSleep3, hrsOfSleep4 } from "./data/graph/Axes";
+import { stepCountAll, heartRateAll, hrsOfSleepAll } from "./data/graph/Axes";
 import { stepCountData, heartRateData, hrsOfSleepData } from "./data/graph/GraphData";
-import Watchlist from "./atoms/watchlist/Watchlist";
 import Timeline from "./data/timeline/Timeline";
 const { Content } = Layout;
 const { Title } = Typography;
@@ -22,12 +19,6 @@ const handleChange = (value) => {
 const onChange1 = (key) => {
   console.log(key);
 };
-
-
-const onChange2 = (pagination, filters, sorter, extra) => {
-    console.log('params', pagination, filters, sorter, extra);
-  };
-
 
 
 
